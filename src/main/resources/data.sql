@@ -33,6 +33,24 @@ INSERT INTO animal (animalid, animaltype, createdby, createddate, lastmodifiedby
                 (6, 'bear', 'SYSTEM', CURRENT_TIMESTAMP, 'SYSTEM', CURRENT_TIMESTAMP),
                 (7, 'turtle', 'SYSTEM', CURRENT_TIMESTAMP, 'SYSTEM', CURRENT_TIMESTAMP);
 
+INSERT INTO users (userid, username, password)
+        VALUES  (1, 'admin', 'admin'),
+                (2, 'zoodata', 'zoodata'),
+                (3, 'animaldata', 'animaldata'),
+                (4, 'mgr', 'mgr');
+
+INSERT INTO roles (roleid, name)
+        VALUES  (1, 'admin'),
+                (2, 'zoodata'),
+                (3, 'animaldata'),
+                (4, 'mgr');
+
+INSERT INTO userroles (userid, roleid)
+        VALUES  (1, 1),
+                (2, 2),
+                (3, 3),
+                (4, 4);
+
 INSERT INTO zooanimals (zooid, animalid, createdby, createddate, lastmodifiedby, lastmodifieddate)
          VALUES (1, 1, 'SYSTEM', CURRENT_TIMESTAMP, 'SYSTEM', CURRENT_TIMESTAMP),
                 (2, 2, 'SYSTEM', CURRENT_TIMESTAMP, 'SYSTEM', CURRENT_TIMESTAMP),
